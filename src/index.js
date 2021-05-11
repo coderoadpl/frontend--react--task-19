@@ -7,11 +7,11 @@ const TEXTS = ['Declarative', 'Component-Based', 'Learn Once, Write Anywhere']
 
 ReactDOM.render(
   <div
-  id={'id'}
-className={'class'}
->
+    id={'id-1'}
+    className={'class'}
+  >
     <h1>Hello React</h1>
-    <ul>
+    <ul id={'id-2'}>
       <li>{TEXTS[0]}</li>
       <li>{TEXTS[1]}</li>
       <li>{TEXTS[2]}</li>
