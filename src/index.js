@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals'
 const TEXTS = ['Declarative', 'Component-Based', 'Learn Once, Write Anywhere']
 
 ReactDOM.render(
-  <div>
+  <div
+  id={'id'}
+className={'class'}
+>
     <h1>Hello React</h1>
     <ul>
       <li>{TEXTS[0]}</li>
-  <li>{TEXTS[1]}</li>
-          <li>{TEXTS[2]}</li>
+      <li>{TEXTS[1]}</li>
+      <li>{TEXTS[2]}</li>
     </ul>
   </div>,
   document.getElementById('root')
