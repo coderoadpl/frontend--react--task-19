@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-const TEXTS = ['Declarative', 'Component-Based', 'Learn Once, Write Anywhere']
+        const TEXTS = ['Declarative', 'Component-Based', 'Learn Once, Write Anywhere']
 
 ReactDOM.render(
   <div>
     <h1>Hello React</h1>
     <ul>
       <li>{TEXTS[0]}</li>
-      <li>{TEXTS[1]}</li>
-      <li>{TEXTS[2]}</li>
+  <li>{TEXTS[1]}</li>
+          <li>{TEXTS[2]}</li>
     </ul>
   </div>,
   document.getElementById('root')
