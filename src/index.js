@@ -3,61 +3,9 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
-const HTML = '<h1>Hello CodeRoad</h1>'
-
 ReactDOM.render(
-  <div
-    id={'id-1'}
-    className={'class-1 class-2'}
-  >
-    <label
-      htmlFor={'checkbox-1'}
-    >
-      {'Controlled checkbox (can\'t update checked value)'}
-    </label>
-    <input
-      id={'checkbox-1'}
-      type={'checkbox'}
-      checked={true}
-    />
-    <label
-      htmlFor={'checkbox-2'}
-    >
-      Uncontrolled checkbox (can update checked value)
-    </label>
-    <input
-      id={'checkbox-2'}
-      type={'checkbox'}
-      defaultChecked={true}
-    />
-    <p>
-      {HTML}
-    </p>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: HTML
-      }}
-    >
-    </p>
-    <select value={'2'}>
-      <option value={'1'}>First</option>
-      <option value={'2'}>Second</option>
-      <option value={'3'}>
-        Third
-      </option>
-    </select>
-    <div
-      style={{
-        color: 'red',
-        backgroundColor: 'black'
-      }}
-    >
-      RED TEXT
-    </div>
-    <input value={'Controlled input'} />
-    <input defaultValue={'Uncontrolled input'} />
-    <textarea value={'Controlled textarea'}></textarea>
-    <textarea defaultValue={'Uncontrolled textarea'}></textarea>
+  <div>
+    <h1>What JSX can render</h1>
   </div>,
   document.getElementById('root')
 )
