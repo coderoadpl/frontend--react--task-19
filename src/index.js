@@ -7,18 +7,11 @@ import reportWebVitals from './reportWebVitals'
 
 // eslint-disable-next-line no-unused-vars
 const names = ['Ala', 'Ola', 'Ela']
-const namesElements = [
-  <li>Ala</li>,
-  <li>Ola</li>,
-  <li>Ela</li>
-]
-
-window.namesElements = namesElements
 
 ReactDOM.render(
   <div>
     <ul>
-      {namesElements}
+      {names.map((name) => <li>{name}</li>)}
     </ul>
   </div>,
   document.getElementById('root')
