@@ -3,6 +3,35 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
+const files = [
+  {
+    id: 1,
+    name: 'File 1'
+  },
+  {
+    id: 2,
+    name: 'Folder 1',
+    files: [
+      {
+        id: 2,
+        name: 'File 2'
+      },
+      {
+        id: 3,
+        name: 'File 3'
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: 'File 4'
+  },
+  {
+    id: 5,
+    name: 'File 5'
+  }
+]
+
 const stringA = 'Ala ma kota'
 const stringB = 'Kot ma Ale'
 
@@ -42,6 +71,33 @@ ReactDOM.render(
         }
       })()
     }
+    <ul>
+      {
+        files.map((file) => {
+          return (
+            <li key={file.id}>
+              {file.name}
+              {
+                file.files ?
+                  <ul>
+                    {
+                      file.files.map((innerFile) => {
+                        return (
+                          <li key={innerFile.id}>
+                            {innerFile.name}
+                          </li>
+                        )
+                      })
+                    }
+                  </ul>
+                  :
+                  null
+              }
+            </li>
+          )
+        })
+      }
+    </ul>
   </div>,
   document.getElementById('root')
 )
