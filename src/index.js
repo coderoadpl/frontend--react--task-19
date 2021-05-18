@@ -1,17 +1,14 @@
-/* eslint-disable react/jsx-key */
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
-// eslint-disable-next-line no-unused-vars
-const names = ['Ala', 'Ola', 'Ela']
+const names = ['Ala', 'Ola', 'Ela', 'Ola']
 
 ReactDOM.render(
   <div>
     <ul>
-      {names.map((name) => <li>{name}</li>)}
+      {names.map((name, i) => <li key={i}>{name}</li>)}
     </ul>
   </div>,
   document.getElementById('root')
