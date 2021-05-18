@@ -3,12 +3,37 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
-const names = ['Ala', 'Ola', 'Ela', 'Ola']
+const files = [
+  {
+    id: 1,
+    name: 'File1'
+  },
+  {
+    id: 2,
+    name: 'File2'
+  },
+  {
+    id: 3,
+    name: 'File3'
+  },
+  {
+    id: 4,
+    name: 'File4'
+  }
+]
 
 ReactDOM.render(
   <div>
     <ul>
-      {names.map((name, i) => <li key={i}>{name}</li>)}
+      {
+      files.map((file) => {
+        return (
+          <li key={file.id}>
+            {file.name}
+          </li>
+        )
+      })
+      }
     </ul>
   </div>,
   document.getElementById('root')
