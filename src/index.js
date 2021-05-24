@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import HelloJS from './HelloJS'
+import Hello from './Hello'
 
 import './index.css'
 import reportWebVitals from './reportWebVitals'
@@ -12,7 +13,11 @@ document.body.appendChild(helloJS1.render())
 document.body.appendChild(helloJS2.render())
 
 ReactDOM.render(
-  <div></div>,
+  <div>
+    {/* THIS IS NOT USAGE OF COMPONENT */}
+    {Hello()}
+    <Hello />
+  </div>,
   document.getElementById('root')
 )
 
