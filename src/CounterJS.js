@@ -2,23 +2,36 @@ export class CounterJS {
   constructor () {
     this.container = null
 
-    this.number = 0
+    this.state = {
+      number: 0
+    }
   }
 
   inc () {
-    this.number = this.number + 1
+    this.setState({ number: this.state.number + 1 })
+  }
+
+  setState (newState) {
+    this.state = {
+      ...this.state,
+      ...newState
+    }
     this.render()
   }
 
   render () {
+    console.log('Render CounterJS was called')
+
     if (!this.container) {
       this.container = document.createElement('div')
     }
 
     this.container.innerHTML = ''
 
+    const { number } = this.state
+
     const h1 = document.createElement('h1')
-    h1.innerText = this.number
+    h1.innerText = number
 
     const button = document.createElement('button')
     button.innerText = '+'

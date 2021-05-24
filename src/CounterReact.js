@@ -11,7 +11,7 @@ export class CounterReact extends React.Component {
   }
 
   render () {
-    console.log('Render was called')
+    console.log('Render CounterReact was called')
 
     const { number } = this.state
 
