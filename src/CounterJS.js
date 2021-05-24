@@ -1,10 +1,21 @@
 export class CounterJS {
   constructor () {
+    this.container = null
+
     this.number = 0
   }
 
+  inc () {
+    this.number = this.number + 1
+    this.render()
+  }
+
   render () {
-    const container = document.createElement('div')
+    if (!this.container) {
+      this.container = document.createElement('div')
+    }
+
+    this.container.innerHTML = ''
 
     const h1 = document.createElement('h1')
     h1.innerText = this.number
@@ -14,15 +25,13 @@ export class CounterJS {
 
     button.addEventListener(
       'click',
-      () => {
-        this.number = this.number + 1
-      }
+      this.inc.bind(this)
     )
 
-    container.appendChild(h1)
-    container.appendChild(button)
+    this.container.appendChild(h1)
+    this.container.appendChild(button)
 
-    return container
+    return this.container
   }
 }
 
