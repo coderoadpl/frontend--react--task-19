@@ -1,4 +1,4 @@
-export class HelloJS {
+export class CounterJS {
   render () {
     const h1 = document.createElement('h1')
     h1.innerText = 'Hello CodeRoad (pure JS)'
@@ -6,4 +6,4 @@ export class HelloJS {
   }
 }
 
-export default HelloJS
+export default CounterJS

@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Hello from './Hello'
-import HelloClass from './HelloClass'
+import CounterJS from './CounterJS'
+import CounterReact from './CounterReact'
 
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
+const counterJS1 = new CounterJS()
+document.body.appendChild(counterJS1.render())
+
 ReactDOM.render(
   <div>
-    <Hello />
-    <Hello />
-    <HelloClass />
-    <HelloClass />
+    <CounterReact />
   </div>,
   document.getElementById('root')
 )
