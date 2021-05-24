@@ -12,12 +12,26 @@ const helloJS2 = new HelloJS()
 document.body.appendChild(helloJS1.render())
 document.body.appendChild(helloJS2.render())
 
+/*
+
+Code below in ReactDOM.render is the same as in JSX:
+
+<div>
+  <Hello />
+  <Hello />
+</div>
+
+*/
+
 ReactDOM.render(
-  <div>
-    {/* THIS IS NOT USAGE OF COMPONENT */}
-    {Hello()}
-    <Hello />
-  </div>,
+  React.createElement(
+    'div',
+    {},
+    [
+      React.createElement(Hello),
+      React.createElement(Hello)
+    ]
+  ),
   document.getElementById('root')
 )
 
