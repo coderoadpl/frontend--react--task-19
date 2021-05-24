@@ -10,22 +10,21 @@ const onClick = (event) => {
 const button = document.createElement('button')
 button.innerText = 'Click me – pure JS'
 
-button.onclick = onClick
+// button.onclick = onClick
 
-// button.addEventListener(
-//   'click',
-//   onClick
-// )
+button.addEventListener(
+  'click',
+  onClick
+)
 
 document.body.appendChild(button)
 
-const buttonJSX = <button>Click me – JSX</button>
-
-// WRONG USAGE OF JSX
-// buttonJSX.onclick = onClick
-
 ReactDOM.render(
-  buttonJSX,
+  <button
+    onClick={onClick}
+  >
+    Click me – JSX
+  </button>,
   document.getElementById('root')
 )
 
