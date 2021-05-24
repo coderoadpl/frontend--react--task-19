@@ -11,9 +11,22 @@ export class CounterReact extends React.Component {
   }
 
   render () {
+    console.log('Render was called')
+
     const { number } = this.state
 
-    return <h1>{number}</h1>
+    return (
+      <div>
+        <h1>{number}</h1>
+        <button
+          onClick={() => {
+            this.setState({ number: this.state.number + 1 })
+          }}
+        >
+          +
+        </button>
+      </div>
+    )
   }
 }
 
