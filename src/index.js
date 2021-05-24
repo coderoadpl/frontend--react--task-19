@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
+const button = document.createElement('button')
+button.innerText = 'Click me – pure JS'
+button.addEventListener(
+  'click',
+  (event) => {
+    console.log('Clicked', event, event.target)
+  }
+)
+
+document.body.appendChild(button)
+
 ReactDOM.render(
   <div>
   </div>,
