@@ -3,31 +3,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
-const onChange = (event) => {
-  console.log('Changed', event, event.target, event.target.value)
-}
-
-const inputOnChange = document.createElement('input')
-inputOnChange.placeholder = 'Input HTML onchange'
-inputOnChange.addEventListener(
-  'change',
-  onChange
-)
-document.body.appendChild(inputOnChange)
-
-const inputOnInput = document.createElement('input')
-inputOnInput.placeholder = 'Input HTML oninput'
-inputOnInput.addEventListener(
-  'input',
-  onChange
-)
-document.body.appendChild(inputOnInput)
-
 ReactDOM.render(
-  <input
-    placeholder={'Input JSX'}
-    onChange={onChange}
-  />,
+  <div></div>,
   document.getElementById('root')
 )
 
