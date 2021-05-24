@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Hello from './Hello'
+import HelloClass from './HelloClass'
 
 import './index.css'
 import reportWebVitals from './reportWebVitals'
@@ -10,6 +11,8 @@ ReactDOM.render(
   <div>
     <Hello />
     <Hello />
+    <HelloClass />
+    <HelloClass />
   </div>,
   document.getElementById('root')
 )
