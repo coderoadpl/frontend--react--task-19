@@ -3,28 +3,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
-const onClick = (event) => {
-  console.log('Clicked', event, event.target)
-}
-
-const button = document.createElement('button')
-button.innerText = 'Click me – pure JS'
-
-// button.onclick = onClick
-
-button.addEventListener(
-  'click',
-  onClick
-)
-
-document.body.appendChild(button)
-
 ReactDOM.render(
-  <button
-    onClick={onClick}
-  >
-    Click me – JSX
-  </button>,
+  <div></div>,
   document.getElementById('root')
 )
 
