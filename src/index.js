@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
+const onClick = (event) => {
+  console.log('Clicked', event, event.target)
+}
+
 const button = document.createElement('button')
 button.innerText = 'Click me – pure JS'
 button.addEventListener(
   'click',
-  (event) => {
-    console.log('Clicked', event, event.target)
-  }
+  onClick
 )
 
 document.body.appendChild(button)
