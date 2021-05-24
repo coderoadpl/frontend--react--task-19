@@ -10,6 +10,10 @@ export class CounterReact extends React.Component {
     }
   }
 
+  inc () {
+    this.setState({ number: this.state.number + 1 })
+  }
+
   render () {
     console.log('Render CounterReact was called')
 
@@ -19,9 +23,7 @@ export class CounterReact extends React.Component {
       <div>
         <h1>{number}</h1>
         <button
-          onClick={() => {
-            this.setState({ number: this.state.number + 1 })
-          }}
+          onClick={this.inc.bind(this)}
         >
           +
         </button>
