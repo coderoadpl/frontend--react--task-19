@@ -7,14 +7,27 @@ export class CounterReact extends React.Component {
 
   inc = () => {
     this.setState({ number: this.state.number + 1 })
+    console.log('Component state', this.state)
   }
 
   inc3 = () => {
-    this.setState({ number: this.state.number + 1 }) // { number: 1 }
+    this.setState((prevState) => {
+      console.log('prevState', prevState)
+      return { number: prevState.number + 1 }
+    }) // { number: 1 }
+    console.log('Component state', this.state)
     // other code
-    this.setState({ number: this.state.number + 1 }) // { number: 1 }
+    this.setState((prevState) => {
+      console.log('prevState', prevState)
+      return { number: prevState.number + 1 }
+    }) // { number: 2 }
+    console.log('Component state', this.state)
     // other code
-    this.setState({ number: this.state.number + 1 }) // { number: 1 }
+    this.setState((prevState) => {
+      console.log('prevState', prevState)
+      return { number: prevState.number + 1 }
+    }) // { number: 3 }
+    console.log('Component state', this.state)
   }
 
   render () {
