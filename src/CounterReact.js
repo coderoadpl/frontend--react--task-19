@@ -9,6 +9,10 @@ export class CounterReact extends React.Component {
     this.setState({ number: this.state.number + 1 })
   }
 
+  inc3 = () => {
+    this.setState({ number: this.state.number + 3 })
+  }
+
   render () {
     console.log('Render CounterReact was called')
 
@@ -20,7 +24,12 @@ export class CounterReact extends React.Component {
         <button
           onClick={this.inc}
         >
-          +
+          + 1
+        </button>
+        <button
+          onClick={this.inc3}
+        >
+          + 3
         </button>
       </div>
     )
