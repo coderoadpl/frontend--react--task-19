@@ -1,13 +1,8 @@
 import React from 'react'
 
 export class CounterReact extends React.Component {
-  constructor () {
-    super()
-
-    // initial state
-    this.state = {
-      number: 0
-    }
+  state = {
+    number: 0
   }
 
   inc () {
