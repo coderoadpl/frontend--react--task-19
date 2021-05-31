@@ -10,7 +10,11 @@ export class CounterReact extends React.Component {
   }
 
   inc3 = () => {
-    this.setState({ number: this.state.number + 3 })
+    this.setState({ number: this.state.number + 1 }) // { number: 1 }
+    // other code
+    this.setState({ number: this.state.number + 1 }) // { number: 1 }
+    // other code
+    this.setState({ number: this.state.number + 1 }) // { number: 1 }
   }
 
   render () {
